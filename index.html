@@ -3,48 +3,60 @@
 <head>
  <title>Sabar.js Library</title>
  <style>
-   body {
-       font-family: Arial, sans-serif;
-       background-color: black;
-       color: orange;
-   }
-   .container {
-       color: orange;
-       background-color: black;
-   }
+  body {
+      font-family: "source sans 3", Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: #FFE70B;
+      line-height: 1.5;
+      max-width: 740px;
+      margin: 6vh auto;
+      overflow-y: overlay;
+  }
+  .container {
+      color: #FFE70B;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  img {
+      width: 10%;
+      height: auto;
+  }
  </style>
 </head>
 <body>
  <div id="container" class="container">
-   <img src="logo.png" alt="Sabar.js Logo" width=10%>
-   <h1>Welcome to Sabar.js!</h1>
-   <p>Sabar.js is a JavaScript library designed to simplify HTML, CSS, and JavaScript writing.</p>
-   <button id="myButton">Click me!</button>
+  <img src="logo.png" alt="Sabar.js Logo">
+  <h1>Welcome to Sabar.js!</h1>
+  <p>Sabar.js is a JavaScript library designed to simplify HTML, CSS, and JavaScript writing.</p>
+  <button id="myButton">Click me!</button>
  </div>
 
  <script src="sabar.js"></script>
  <script>
-   const { createElement, applyStyles, addEventListener, setText, setAttribute } = require('sabar.js');
+  const { createElement, applyStyles, addEventListener, setText, setAttribute } = require('sabar.js');
 
-   // Create a div element
-   const div = createElement('div', { className: 'container' });
+  // Create a div element
+  const div = createElement('div', { className: 'container' });
 
-   // Apply styles to the element
-   applyStyles(div, { color: 'orange', backgroundColor: 'black' });
+  // Apply styles to the element
+  applyStyles(div, { color: '#FFE70B', backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' });
 
-   // Add an event listener to the element
-   addEventListener(div, 'click', () => {
-       console.log('Div clicked!');
-   });
+  // Add an event listener to the element
+  addEventListener(div, 'click', () => {
+      console.log('Div clicked!');
+  });
 
-   // Change the element's text
-   setText(div, 'Hello, world!');
+  // Change the element's text
+  setText(div, 'Hello, world!');
 
-   // Change the element's attribute
-   setAttribute(div, 'data-custom', 'custom value');
+  // Change the element's attribute
+  setAttribute(div, 'data-custom', 'custom value');
 
-   // Add the element to the body
-   document.body.appendChild(div);
+  // Add the element to the body
+  document.body.appendChild(div);
  </script>
 </body>
 </html>
