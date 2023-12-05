@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Sabar.js Library</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+       }
+       .container {
+           color: red;
+           background-color: black;
+       }
+   </style>
+</head>
+<body>
+   <div id="container" class="container">
+       <h1>Welcome to Sabar.js</h1>
+       <p>Click the button below to see a message:</p>
+       <button id="myButton">Click me!</button>
+   </div>
+
+   <script src="sabar.js"></script>
+   <script>
+       const { createElement, applyStyles, addEventListener, setText, setAttribute } = require('sabar.js');
+
+       // Create a div element
+       const div = createElement('div', { className: 'container' });
+
+       // Apply styles to the element
+       applyStyles(div, { color: 'red', backgroundColor: 'black' });
+
+       // Add an event listener to the element
+       addEventListener(div, 'click', () => {
+           console.log('Div clicked!');
+       });
+
+       // Change the element's text
+       setText(div, 'Hello, world!');
+
+       // Change the element's attribute
+       setAttribute(div, 'data-custom', 'custom value');
+
+       // Add the element to the body
+       document.body.appendChild(div);
+   </script>
+</body>
+</html>
