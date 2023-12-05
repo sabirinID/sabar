@@ -7,7 +7,7 @@ Sabar.js is a JavaScript library designed to simplify HTML, CSS, and JavaScript 
 First, you need to install Sabar.js through npm:
 
 ```
-bash npm install sabar.js
+npm install sabar.js
 ```
 
 Then, you can import Sabar.js into your project and use the provided functions:
